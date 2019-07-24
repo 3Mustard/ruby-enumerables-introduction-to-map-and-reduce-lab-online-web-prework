@@ -69,14 +69,12 @@ def reduce_to_any_true(array)
   i = 0
   false_count = 0
   while i < array.length do
-    until array[i]
+    if !array[i]
       false_count += 1
-      i += 1
+      i +=1
+    else
+      return true
     end
   end
-  if false_count == array.length
-    return false
-  else 
-    return true
-  end
+  return false if false_count == array.length
 end
