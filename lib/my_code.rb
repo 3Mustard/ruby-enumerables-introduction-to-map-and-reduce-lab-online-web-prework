@@ -62,8 +62,6 @@ def reduce_to_all_true(array)
       return false
     end
   end
-  if true_count == array.length
-    return true
-  end
+  return true if true_count == array.length
 end
 
